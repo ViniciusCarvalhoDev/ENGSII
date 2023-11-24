@@ -21,10 +21,10 @@ jobs:
         java-version: '11'
 
     - name: Compile Java code
-      run: javac -d target src/*.java
+      run: javac -d target src/main*.java
 
     - name: Run tests
-      run: java -cp target src/MySetTests/*.java
+      run: java -cp target src/MySetTests/AllTests*.java
 
     - name: Clean up
       run: rm -rf target
