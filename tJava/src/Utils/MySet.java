@@ -10,6 +10,14 @@ public class MySet<T> {
         this.elementos = new ArrayList<>();
     }
 	
+	public void add(T element){
+		this.elementos.add(element);	
+	}
+	
+	public void addAll(List<T> elements){
+		this.elementos.addAll(elements);	
+	}
+	
 	public List<T> getConjunto(){
 		return this.elementos;
 	}
@@ -28,9 +36,34 @@ public class MySet<T> {
                 uniqueInB.add(element);
             }
         }
+        
+        List<T> resultado = this.elementos;
+        resultado.addAll(uniqueInB);
+        
+        return resultado;
+    }
+	
+	public List<T> intersConj(List<T> A) {
+        List<T> intersection = new ArrayList<>();
 
-        this.elementos.addAll(uniqueInB);
-        return this.elementos;
+        for (T element : A) {
+            if (this.elementos.contains(element)) {
+                intersection.add(element);
+            }
+        }
+
+        return intersection;
+    }
+	
+	public  List<T> diffConj(List<T> A) {
+		List<T> intersection = this.intersConj(A);
+        List<T> result = this.elementos;
+        
+        for (T element : intersection) {
+        	result.remove(result.indexOf(element));
+        }
+
+        return result;
     }
 
 }

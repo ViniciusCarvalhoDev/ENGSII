@@ -14,18 +14,22 @@ public class main {
         List<Object> listA = new ArrayList<>();
         listA.add(1);
         listA.add(2);
+        listA.add(3);
         listA.add(25);
-
+        
+        mySet.addAll(listA);
         mySet.uniaoConj(listA);
 
 
-        List<Integer> listB = new ArrayList<>();
+        List<Object> listB = new ArrayList<>();
         listB.add(3);
         listB.add(4);
         listB.add(5);
 
         List<Object> result = mySet.uniaoConj(listB);
         System.out.println("Union: " + result);
+        
+        System.out.println("Union: " + mySet.intersConj(listB));
 	}
 
 }
