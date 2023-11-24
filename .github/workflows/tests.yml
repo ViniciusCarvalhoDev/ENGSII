@@ -24,6 +24,6 @@ jobs:
       run: mvn -B clean install
 
     - name: Run tests
-      run: mvn '-Dtest=MySetTests.MySetTests.AllTests*Test' test
+      run: mvn test
 
     
