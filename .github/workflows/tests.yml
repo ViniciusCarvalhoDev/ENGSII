@@ -1,4 +1,4 @@
-name: Java CI without Maven
+name: Java CI with JUnit
 
 on:
   push:
@@ -20,8 +20,8 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Run tests
-      run: java -cp target src/MySetTests/AllTests.java
+    - name: Compile Java code
+      run: javac -d target src/*.java src/MySetTests/*.java
 
-    - name: Clean up
-      run: rm -rf target
+    - name: Run JUnit tests
+      run: java -cp target:/usr/share/java/junit.jar org.junit.runner.JUnitCore MySetTests.AllTests
