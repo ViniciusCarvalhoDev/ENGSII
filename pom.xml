@@ -23,7 +23,6 @@
     </dependencies>
 
     <build>
-    <testSourceDirectory>src/MySetTests</testSourceDirectory>
     <resources>
         <resource>
             <directory>src</directory>
