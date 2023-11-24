@@ -23,6 +23,7 @@
 
     <build>
     <resources>
+        <testSourceDirectory>src/MySetTests</testSourceDirectory>
         <resource>
             <directory>src</directory>
             <excludes>
