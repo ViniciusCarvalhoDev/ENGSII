@@ -22,8 +22,8 @@
     </dependencies>
 
     <build>
+    <testSourceDirectory>src/MySetTests</testSourceDirectory>
     <resources>
-        <testSourceDirectory>src/MySetTests</testSourceDirectory>
         <resource>
             <directory>src</directory>
             <excludes>
