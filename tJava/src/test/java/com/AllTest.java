@@ -10,7 +10,7 @@ import org.junit.platform.suite.api.Suite;
 
 import Utils.MySet;
 
-class AllTests {
+class AllTest {
 
     @Test
     void testAdd() {
