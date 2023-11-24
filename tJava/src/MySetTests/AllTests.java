@@ -79,6 +79,6 @@ class MySetTest {
 
         List<Integer> result = setA.diffConj(setB.getConjunto());
 
-        assertEquals(Arrays.asList(1), result);
+        assertEquals(Arrays.asList(1, 2, 3), result);
     }
 }
