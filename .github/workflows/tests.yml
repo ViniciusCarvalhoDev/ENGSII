@@ -24,6 +24,6 @@ jobs:
       run: mvn -B clean install
 
     - name: Run tests
-      run: mvn -DtestSourceDirectory=src/MySetTests clean test
+      run: mvn test
 
     
